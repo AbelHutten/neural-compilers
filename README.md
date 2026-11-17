@@ -1,3 +1,7 @@
+# Fork of Neural Compilers by Jordi Armengol-Estape
+
+By fixing a bug in whitespace handling and increasing the token-limit during inference, I was able to improve the IO correctness of the generated assemly code on the eval set from 21/64 to 43/64.
+
 # Neural Compilers
 
 Code for building a neural compiler (a Transformer that learns to translate C to x86), from "Learning C to x86 Translation: An Experiment in Neural Compilation" (https://arxiv.org/abs/2108.07639).
