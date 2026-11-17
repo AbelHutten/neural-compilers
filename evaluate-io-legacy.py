@@ -577,7 +577,7 @@ def run_io(c_code: str, example_path: str, just_func_code: str, main_code: str, 
             try:
                 prefix_ex = './' if not os.path.isabs(output) else ''
                 stdout, stderr = run_command(f'{prefix_ex}{output}', stdin=in_, timeout=5)
-                if stdout.strip() == out_:
+                if stdout.strip() == out_.strip():
                     model_corrects += 1
             except BaseException as e:
                 if isinstance(e, TimeoutError):
