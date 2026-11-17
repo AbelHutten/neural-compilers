@@ -64,7 +64,7 @@ def run_model(data_path: str, model_path: str, beam: int, top_n: int, checkpoint
     directions = '-s c -t s'
     if not os.path.isabs(checkpoint_path):
         checkpoint_path = os.path.join(model_path, checkpoint_path)
-    command = f'fairseq-interactive {model_path} {directions} --path {checkpoint_path} --beam {beam} --nbest {top_n}'
+    command = f'fairseq-interactive {model_path} {directions} --path {checkpoint_path} --beam {beam} --nbest {top_n} --max-len-b 512'
 
     with open(data_path, 'r') as f:
         c_code = f.read()
